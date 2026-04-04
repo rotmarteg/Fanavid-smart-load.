@@ -1,0 +1,99 @@
+/* 1. FUNDO VERDE QUE VOCÊ GOSTOU */
+body {
+background: radial-gradient(circle at center, #00bfa5, #004d40);
+font-family: 'Segoe UI', sans-serif;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 100vh;
+margin: 0;
+}
+
+/* 2. O CONTAINER (O QUADRADO BRANCO) */
+.container {
+background: white;
+padding: 30px;
+border-radius: 20px;
+box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+text-align: center;
+width: 360px;
+}
+
+.logo {
+width: 100px;
+margin-bottom: 15px;
+}
+
+h1 {
+font-size: 20px;
+color: #004d40;
+margin: 0;
+}
+
+p {
+font-size: 11px;
+color: #888;
+margin-bottom: 25px;
+}
+
+/* 3. LAYOUT DOS SELETORES (SIMPLES E MODERNO) */
+.input-group {
+text-align: left;
+margin-bottom: 18px;
+}
+
+label {
+display: block;
+font-size: 11px;
+font-weight: bold;
+margin-bottom: 5px;
+text-transform: uppercase;
+letter-spacing: 0.5px;
+}
+
+/* ESTILO DAS BARRAS COM CORES DISCRETAS MAS MODERNAS */
+select, input {
+width: 100%;
+padding: 12px;
+border-radius: 10px;
+font-size: 14px;
+border: 2px solid #eee;
+outline: none;
+transition: 0.3s;
+box-sizing: border-box; /* Fundamental para não vazar do quadrado */
+}
+
+/* CORES NAS BORDAS PARA IDENTIFICAR OS ITENS */
+#cliente { border-left: 5px solid #0077b6; background-color: #f0f7ff; }
+#veiculo { border-left: 5px solid #f39c12; background-color: #fff9f0; }
+#quantidade { border-left: 5px solid #8e44ad; background-color: #f9f0ff; }
+
+/* EFEITO AO CLICAR */
+select:focus, input:focus {
+border-color: #28a745;
+background-color: white;
+}
+
+/* 4. BOTÃO */
+button {
+width: 100%;
+padding: 15px;
+background-color: #28a745;
+color: white;
+border: none;
+border-radius: 10px;
+cursor: pointer;
+font-weight: bold;
+text-transform: uppercase;
+box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2);
+}
+
+/* 5. RESULTADO */
+#resultado {
+margin-top: 20px;
+padding: 15px;
+background: #f8fcf9;
+border-radius: 10px;
+border: 1px solid #e0eee0;
+display: none;
+}
