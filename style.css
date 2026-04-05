@@ -1,99 +1,79 @@
-/* 1. FUNDO VERDE QUE VOCÊ GOSTOU */
+/* Configuração da Tela */
 body {
-background: radial-gradient(circle at center, #00bfa5, #004d40);
+background-color: #7DB89B; /* Verde do fundo */
 font-family: 'Segoe UI', sans-serif;
 display: flex;
 justify-content: center;
 align-items: center;
-height: 100vh;
+min-height: 100vh;
 margin: 0;
+padding: 10px;
 }
 
-/* 2. O CONTAINER (O QUADRADO BRANCO) */
+/* O Card Branco */
 .container {
-background: white;
+background-color: white;
 padding: 30px;
 border-radius: 20px;
-box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-text-align: center;
-width: 360px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+width: 100%;
+max-width: 400px;
 }
 
-.logo {
-width: 100px;
-margin-bottom: 15px;
-}
+h2 { margin: 0; color: #333; }
+.subtitle { font-size: 12px; color: #888; margin-bottom: 20px; }
 
-h1 {
-font-size: 20px;
-color: #004d40;
-margin: 0;
-}
-
-p {
-font-size: 11px;
-color: #888;
-margin-bottom: 25px;
-}
-
-/* 3. LAYOUT DOS SELETORES (SIMPLES E MODERNO) */
-.input-group {
-text-align: left;
-margin-bottom: 18px;
-}
-
+/* Labels e Inputs */
 label {
 display: block;
+text-align: left;
 font-size: 11px;
 font-weight: bold;
+color: #555;
 margin-bottom: 5px;
-text-transform: uppercase;
-letter-spacing: 0.5px;
 }
 
-/* ESTILO DAS BARRAS COM CORES DISCRETAS MAS MODERNAS */
-select, input {
+input[type="number"], select {
 width: 100%;
 padding: 12px;
-border-radius: 10px;
-font-size: 14px;
-border: 2px solid #eee;
-outline: none;
-transition: 0.3s;
-box-sizing: border-box; /* Fundamental para não vazar do quadrado */
+margin-bottom: 15px;
+border: 1px solid #ddd;
+border-radius: 8px;
+background-color: #fcfcfc;
+box-sizing: border-box;
 }
 
-/* CORES NAS BORDAS PARA IDENTIFICAR OS ITENS */
-#cliente { border-left: 5px solid #0077b6; background-color: #f0f7ff; }
-#veiculo { border-left: 5px solid #f39c12; background-color: #fff9f0; }
-#quantidade { border-left: 5px solid #8e44ad; background-color: #f9f0ff; }
-
-/* EFEITO AO CLICAR */
-select:focus, input:focus {
-border-color: #28a745;
-background-color: white;
+/* Grid para colocar Ethos e Juandi lado a lado */
+.grid-inputs {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 15px;
 }
 
-/* 4. BOTÃO */
+.checkbox-container {
+display: flex;
+align-items: center;
+gap: 10px;
+margin: 10px 0 20px 0;
+}
+.checkbox-container label { margin: 0; cursor: pointer; }
+
+/* Botão */
 button {
 width: 100%;
 padding: 15px;
-background-color: #28a745;
+background-color: #5cb85c;
 color: white;
 border: none;
 border-radius: 10px;
-cursor: pointer;
 font-weight: bold;
-text-transform: uppercase;
-box-shadow: 0 4px 10px rgba(40, 167, 69, 0.2);
+font-size: 16px;
+cursor: pointer;
+transition: 0.3s;
 }
 
-/* 5. RESULTADO */
-#resultado {
-margin-top: 20px;
-padding: 15px;
-background: #f8fcf9;
-border-radius: 10px;
-border: 1px solid #e0eee0;
-display: none;
-}
+button:hover { background-color: #4cae4c; }
+
+/* Rodapé */
+.footer { margin-top: 20px; font-size: 11px; color: #999; }
+#resultado { margin-top: 15px; font-weight: bold; color: #333; }

@@ -50,5 +50,4 @@ display.innerHTML = `
 ${ocupacao > 100 ? "⚠️ ATENÇÃO: CARGA DIVIDIDA EM MAIS VEÍCULOS" : "✅ CARGA TOTALMENTE ACOMODADA"}
 </div>
 </div>
-`;
-}
+`;};

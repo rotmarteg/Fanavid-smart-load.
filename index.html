@@ -4,21 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fanavid Smart Load - Premium</title>
-<style>
-body { background-color: #2e7d32; display: flex; justify-content: center; align-items: flex-start; min-height: 100vh; margin: 0; padding: 40px 10px; font-family: 'Segoe UI', sans-serif; }
-.container { max-width: 450px; width: 100%; background-color: #f4f4f4; padding: 30px; border-radius: 25px; box-shadow: 0 15px 35px rgba(0,0,0,0.4); border: 3px solid #1b5e20; }
-h2 { text-align: center; color: #2e7d32; margin: 0 0 5px 0; }
-.subtitle { text-align: center; font-size: 0.85em; color: #666; margin-bottom: 20px; }
-label { display: block; font-weight: bold; margin: 10px 0 5px 0; font-size: 0.9em; }
-select, input { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #ccc; box-sizing: border-box; font-size: 1em; }
-.client-box { background: #e8f5e9; padding: 15px; border-radius: 15px; border: 1px solid #c8e6c9; margin-bottom: 15px; }
-.truck-icon { font-size: 40px; text-align: center; margin: 20px 0; display: block; }
-button { width: 100%; padding: 18px; background-color: #2e7d32; color: white; border: none; border-radius: 12px; font-size: 1.1em; font-weight: bold; cursor: pointer; transition: 0.3s; margin-top: 10px; }
-button:hover { background-color: #1b5e20; transform: scale(1.02); }
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <div class="container">
 <h2>Fanavid Smart Load</h2>
 <p class="subtitle">Logística Inteligente: Ethos | Comax | Juandi</p>
@@ -30,34 +18,34 @@ button:hover { background-color: #1b5e20; transform: scale(1.02); }
 <option value="vlc">VLC / 3/4 (12m²)</option>
 </select>
 
-<div class="client-box">
-<label>QUANTIDADE DE RACKS:</label>
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+<div class="grid-inputs">
 <div>
-<span style="font-size: 0.8em; font-weight: bold;">ETHOS:</span>
+<label>ETHOS:</label>
 <input type="number" id="qEthos" placeholder="0">
 </div>
 <div>
-<span style="font-size: 0.8em; font-weight: bold;">JUANDI:</span>
+<label>JUANDI:</label>
 <input type="number" id="qJuandi" placeholder="0">
-</div>
-<div style="grid-column: span 2;">
-<span style="font-size: 0.8em; font-weight: bold;">COMAX:</span>
-<input type="number" id="qComax" placeholder="0">
-</div>
 </div>
 </div>
 
-<div style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
-<input type="checkbox" id="empilhado" style="transform: scale(1.4);">
-<label for="empilhado" style="margin: 0; cursor: pointer;">📦 CARGA COM 2 ANDARES</label>
+<div class="full-width">
+<label>COMAX:</label>
+<input type="number" id="qComax" placeholder="0">
+</div>
+
+<div class="checkbox-container">
+<input type="checkbox" id="empilhado">
+<label for="empilhado">📦 CARGA COM 2 ANDARES</label>
 </div>
 
 <button onclick="calcularCarga()">CALCULAR EFICIÊNCIA</button>
 
-<div id="resultado" style="margin-top: 25px; display: none;"></div>
+<div id="resultado"></div>
 
-<div class="truck-icon">🚚💨 <span style="font-size: 0.3em; display: block; color: #999;">Expedição Fanavid</span></div>
+<div class="footer">
+🚛💨 <span>Expedição Fanavid</span>
+</div>
 </div>
 
 <script src="script.js"></script>
